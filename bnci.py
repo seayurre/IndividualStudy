@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import copy
 
 # Set this according to your dataset location.
-DATASET_ROOT = "C:/Users/NMAIL/Desktop/BCNI dataset"
+DATASET_ROOT = "C:/Users/NMAIL/Desktop/BNCI dataset"
 
 
 # 주어진 데이터셋을 EEG data & label로 처리하여 반환
@@ -124,5 +124,5 @@ print(res_class)
 #         data_by_trial[x][y] = res_data[x,y,:]
 # print(res_data.shape)
 
-epochs_array = EEG_to_epochs(res_data, res_class,sfreq = 250,  )
+epochs_array = EEG_to_epochs(res_data, res_class,sfreq = 250,)
 
