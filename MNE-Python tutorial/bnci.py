@@ -112,17 +112,3 @@ def EEG_to_epochs(eeg_array, label_array, sfreq=500, event_id = {'Left Hand':0,'
     epochs = mne.EpochsArray(data, info, events, tmin=0, event_id=event_id)
 
     return epochs
-
-
-res_data, res_class = get_data_2a(1, True)
-print(res_data.shape) # (288,22,1875)
-print(res_class)
-
-# data_by_trial = np.empty((288, 22), dtype=object)
-# for x in range(288):
-#     for y in range(22):
-#         data_by_trial[x][y] = res_data[x,y,:]
-# print(res_data.shape)
-
-epochs_array = EEG_to_epochs(res_data, res_class,sfreq = 250,)
-
